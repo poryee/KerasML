@@ -2,7 +2,7 @@
 
 import numpy as np
 #reproducibility
-np.random.seed(1337)
+np.random.seed(3)
 from keras.models import Sequential
 from keras.layers import Dense
 import matplotlib.pyplot as plt
@@ -35,7 +35,7 @@ model.add(Dense(output_dim=1,input_dim=1))
 model.compile(loss='mse',optimizer='sgd')
 
 #training
-print("testing---------------")
+print("training---------------")
 for step in range(501):
     cost = model.train_on_batch(X_train, Y_train)
     if step % 100 == 0:
